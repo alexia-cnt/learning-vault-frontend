@@ -1,0 +1,15 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import { SearchProvider } from "./context/SearchContext";
+import "./styles/global.css";
+import "./styles/components.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <SearchProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </SearchProvider>
+);

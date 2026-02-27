@@ -1,0 +1,123 @@
+/* ------------- MAIN CONTAINER ------------- */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ------------- CARD ------------- */
+
+.login-card {
+  background-color: #2a2c33;
+  width: 360px;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-card h1 {
+  color: #f1f1f1;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* ======= INPUT ====== */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login-card input {
+  background-color: #333640;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 12px;
+  border-radius: 8px;
+  color: #f1f1f1;
+  font-size: 14px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-card input::placeholder {
+  color: #b0b3c0;
+}
+
+.login-card input:focus {
+  outline: none;
+  border-color: #7c4dff;
+  box-shadow: 0 0 0 2px rgba(124, 77, 255, 0.3);
+}
+
+/* ======= BUTTON ======= */
+
+.login-card button {
+  background: linear-gradient(135deg, #7c4dff, #9f7aea);
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.login-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(124, 77, 255, 0.4);
+}
+
+.login-button {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* ======== LINK ======= */
+
+.forgot-link {
+  font-size: 13px;
+  color: #9f7aea;
+  text-decoration: none;
+  align-self: flex-end;
+  transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+  color: #c4b5fd;
+}
+
+.error-message {
+  color: #ff6b81;
+  font-size: 13px;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+.register-link {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 10px;
+  color: #b0b3c0;
+}
+
+.register-link a {
+  color: #9f7aea;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  color: #c4b5fd;
+}
+
+.success-message {
+  color: #7ee787;
+  font-size: 13px;
+}

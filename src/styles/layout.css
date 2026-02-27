@@ -1,0 +1,135 @@
+/* ------------- CONTAINER ------------- */
+
+.app-section-container {
+  width: 90%;
+  margin: 60px auto;
+  background-color: #303036;
+  padding: 50px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ------------- TITLES ------------- */
+
+.app-section-container h2 {
+  color: #ffffffce;
+}
+
+/* ======= DASHBOARD ======= */
+
+.dashboard-title {
+  color: #bd45db;
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+/* ------------- LISTS ------------- */
+
+.app-section-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.app-section-container li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.app-section-container a {
+  text-decoration: none;
+}
+
+.app-section-container li a {
+  color: #a13eb9;
+  font-weight: 600;
+}
+
+.app-section-container li a:hover {
+  color: #d059ee;
+}
+
+/* ------------- INPUT ------------- */
+
+.app-section-container input {
+  background-color: #3a3a42;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  color: #f1f1f1;
+  font-size: 14px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-section-container input::placeholder {
+  color: #b0b3c0;
+}
+
+.app-section-container input:focus {
+  outline: none;
+  border-color: #9F5CFF;
+  box-shadow: 0 0 0 2px rgba(159, 92, 255, 0.3);
+}
+
+.app-section-container textarea {
+  background-color: #3a3a42;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  color: #f1f1f1;
+  font-size: 14px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  resize: vertical;
+}
+
+.app-section-container textarea::placeholder {
+  color: #b0b3c0;
+}
+
+.app-section-container textarea:focus {
+  outline: none;
+  border-color: #9F5CFF;
+  box-shadow: 0 0 0 2px rgba(159, 92, 255, 0.3);
+}
+
+
+/* ------------- RESPONSIVE ------------- */
+
+@media (max-width: 1024px) {
+  .app-section-container {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-section-container {
+    width: 95%;
+    padding: 30px;
+  }
+  .header-right span {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-section-container {
+    padding: 20px;
+    border-radius: 14px;
+  }
+  .app-header {
+    padding: 0 15px;
+  }
+  .header-search {
+    display: none; 
+  }
+  h1 {
+    font-size: 22px;
+  }
+  h2, h3 {
+    font-size: 16px;
+  }
+}

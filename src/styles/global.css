@@ -1,0 +1,48 @@
+/* ------------- NORMALIZACION ------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ------------- BODY ------------- */
+
+body {
+  background-color: #1e1f24;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #f1f1f1;
+}
+
+
+/* ------------- MAIN CONTAINER ------------- */
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ------------- TITLES ------------- */
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+h2 {
+  margin: 30px 0 15px;
+  font-size: 20px;
+}
+
+h3 {
+  margin: 25px 0 10px;
+  font-size: 16px;
+}
+
+.page-title {
+    color: #bd45db;
+}
+
