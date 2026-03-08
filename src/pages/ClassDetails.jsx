@@ -82,9 +82,21 @@ function ClassDetails() {
     }
   };
 
-  const filteredBlocks = blocks.filter(block =>
-    block.content.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const search = searchTerm.toLowerCase();
+
+  const filteredBlocks = blocks.filter((block) => {
+    const content = block.content?.toLowerCase() || "";
+
+    const matchesSearch = content.includes(search);
+
+    const matchesTab =
+      activeTab === "todo" ||
+      (activeTab === "texto" && block.type === "text") ||
+      (activeTab === "imagenes" && block.type === "image") ||
+      (activeTab === "videos" && block.type === "link");
+
+    return matchesSearch && matchesTab;
+  });
 
   return (
     <div className="app-section-container">

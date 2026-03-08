@@ -4,7 +4,7 @@ import { useContext, useState, useEffect } from "react";
 import { SearchContext } from "../context/SearchContext";
 import api from "../api/axios";
 
-function HeaderLayout() {
+function HeaderLayout({ theme, setTheme }) {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("user"));
   const { searchTerm, setSearchTerm } = useContext(SearchContext);
@@ -60,17 +60,36 @@ function HeaderLayout() {
     <div className={`app-container ${(menuOpen || searchOpen) ? "blur-background" : ""}`}>
 
       <header className={`app-header ${(menuOpen || searchOpen) ? "hidden-header" : ""}`}>
-        <button
-          className="menu-button"
-          onClick={() => {
-            if (window.innerWidth <= 768) {
-                setSearchOpen(false);
-                setMenuOpen(true);
-            }
-          }}
-        >
-            <i className="bi bi-list"></i>
-        </button>
+        
+        <div className="header-left">
+
+          <button
+            className="menu-button"
+            onClick={() => {
+              if (window.innerWidth <= 768) {
+                  setSearchOpen(false);
+                  setMenuOpen(true);
+              }
+            }}
+          >
+              <i className="bi bi-list"></i>
+          </button>
+
+          <button
+            className="home-button"
+            onClick={() => navigate("/dashboard")}
+          >
+            <i className="bi bi-house"></i>
+          </button>
+
+          <button
+            className="theme-toggle"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          >
+            <i className={`bi ${theme === "dark" ? "bi-moon" : "bi-sun"}`}></i>
+          </button>
+
+        </div>
 
         <div className={`header-search desktop-search ${showDropdown ? "active" : ""}`}>
             <i className="bi bi-search"></i>
@@ -252,6 +271,14 @@ function HeaderLayout() {
           >
             <i className="bi bi-house"></i>
             <span>Inicio</span>
+          </div>
+
+          <div
+            className="drawer-item"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          >
+            <i className={`bi ${theme === "dark" ? "bi-moon" : "bi-sun"}`}></i>
+            <span>Tema</span>
           </div>
 
           <div className="drawer-spacer"></div>

@@ -121,3 +121,16 @@
   color: #7ee787;
   font-size: 13px;
 }
+
+/* ======= PASSWORD ====== */
+
+.password-hint {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.password-hint ul {
+  margin: 4px 0 0 16px;
+  padding: 0;
+}

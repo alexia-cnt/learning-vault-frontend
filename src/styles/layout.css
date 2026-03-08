@@ -1,9 +1,48 @@
+/* ------------- COLORES ------------- */
+
+/* ======= DARK THEME - DEFAULT ======= */
+
+:root {
+  --bg-container: #303036;
+  --bg-input: #3a3a42;
+  --text-primary: #f1f1f1;
+  --text-secondary: #ffffffce;
+  --text-placeholder: #b0b3c0;
+  --border-input: rgba(255, 255, 255, 0.06);
+  --accent: #9F5CFF;
+  --accent-strong: #bd45db;
+  --link-color: #a13eb9;
+  --link-hover: #d059ee;
+  --divider: rgba(255,255,255,0.08);
+  --searchbar-icon: rgba(255, 255, 255, 0.6);
+  --searchbar-dropdown: rgba(159, 92, 255, 0.15);
+}
+
+/* ======= LIGHT THEME ======= */
+
+[data-theme="light"] {
+  --bg-container: #ffffff;
+  --bg-input: #f3f3f7;
+  --text-primary: #1a1a1a;
+  --text-secondary: #333333;
+  --text-placeholder: #777;
+  --border-input: rgba(0, 0, 0, 0.08);
+  --accent: #9F5CFF;
+  --accent-strong: #7b3ff2;
+  --link-color: #7b3ff2;
+  --link-hover: #5c2bd1;
+  --divider: rgba(0,0,0,0.08);
+  --searchbar-icon: rgba(92, 92, 92, 0.6);
+  --searchbar-dropdown: rgba(255, 255, 255, 0.938);
+}
+
+
 /* ------------- CONTAINER ------------- */
 
 .app-section-container {
   width: 90%;
   margin: 60px auto;
-  background-color: #303036;
+  background-color: var(--bg-container);
   padding: 50px;
   border-radius: 18px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
@@ -12,13 +51,13 @@
 /* ------------- TITLES ------------- */
 
 .app-section-container h2 {
-  color: #ffffffce;
+  color: var(--text-secondary);
 }
 
 /* ======= DASHBOARD ======= */
 
 .dashboard-title {
-  color: #bd45db;
+  color: var(--accent-strong);
   font-size: 30px;
   margin-bottom: 35px;
 }
@@ -33,7 +72,7 @@
 
 .app-section-container li {
   padding: 12px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--divider);
   word-break: break-word;
   overflow-wrap: break-word;
 }
@@ -43,23 +82,23 @@
 }
 
 .app-section-container li a {
-  color: #a13eb9;
+  color: var(--link-color);
   font-weight: 600;
 }
 
 .app-section-container li a:hover {
-  color: #d059ee;
+  color: var(--link-hover);
 }
 
 /* ------------- INPUT ------------- */
 
 .app-section-container input {
-  background-color: #3a3a42;
+  background-color: var(--bg-input);
   border: 1px solid rgba(255, 255, 255, 0.06);
   width: 100%;
   padding: 12px;
   border-radius: 8px;
-  color: #f1f1f1;
+  color: var(--text-primary);
   font-size: 14px;
   transition: border 0.2s ease, box-shadow 0.2s ease;
 }
@@ -70,29 +109,29 @@
 
 .app-section-container input:focus {
   outline: none;
-  border-color: #9F5CFF;
+  border-color: var(--accent);
   box-shadow: 0 0 0 2px rgba(159, 92, 255, 0.3);
 }
 
 .app-section-container textarea {
-  background-color: #3a3a42;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-input);
   width: 100%;
   padding: 12px;
   border-radius: 8px;
-  color: #f1f1f1;
+  color: var(--text-primary);
   font-size: 14px;
   transition: border 0.2s ease, box-shadow 0.2s ease;
   resize: vertical;
 }
 
 .app-section-container textarea::placeholder {
-  color: #b0b3c0;
+  color: var(--text-placeholder);
 }
 
 .app-section-container textarea:focus {
   outline: none;
-  border-color: #9F5CFF;
+  border-color: var(--accent);
   box-shadow: 0 0 0 2px rgba(159, 92, 255, 0.3);
 }
 

@@ -22,10 +22,19 @@ function Register() {
     });
   };
 
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     setMessage("");
+
+    if (!passwordRegex.test(form.password)) {
+      setError(
+        "La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula y un número."
+      );
+      return;
+    }
 
     try {
       await api.post("/auth/register", form);
@@ -36,7 +45,8 @@ function Register() {
         navigate("/");
       }, 3000);
 
-    } catch (err) {
+    } 
+    catch (err) {
       setError(
         err.response?.data?.message || "Error al registrar usuario"
       );
@@ -77,6 +87,17 @@ function Register() {
               onChange={handleChange}
               required
             />
+
+            <div className="password-hint">
+              <p>La contraseña debe tener:</p>
+              <ul>
+                <li>Mínimo 8 caracteres</li>
+                <li>Una mayúscula</li>
+                <li>Una minúscula</li>
+                <li>Un número</li>
+              </ul>
+            </div>
+            
           </div>
 
           {error && <p className="error-message">{error}</p>}

@@ -1,5 +1,11 @@
 /* ---------------- HEADER ---------------- */
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .app-header {
   height: 70px;
   background-color: #713082;
@@ -32,13 +38,39 @@
 }
 
 
+/* ---------------- HOME BUTTON ---------------- */
+
+.home-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.home-button:hover {
+  opacity: 0.8;
+}
+
+
+/* ---------------- CHANGE THEME BUTTON ---------------- */
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+
 /* ---------------- SEARCH BAR ---------------- */
 
 .header-search {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #3a3a42;
+  background-color: var( --bg-input);
   padding: 8px 16px;
   border-radius: 30px;
   width: 420px;
@@ -47,19 +79,34 @@
 }
 
 .header-search i {
-  color: rgba(255, 255, 255, 0.6);
+  color: var( --searchbar-icon);
 }
 
 .header-search input {
   background: none;
   border: none;
   outline: none;
-  color: white;
+  color: var( --text-main);
   width: 100%;
 }
 
 .header-search.active {
   border-radius: 18px 18px 0 0;
+}
+
+/* ========= SEARCH ITEM ======== */
+
+.search-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  color: var( --text-main);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var( --divider);
+}
+
+.search-item:hover {
+  background: #7e3591ce;
 }
 
 /* ========= MOBILE SEARCH ======== */
@@ -81,7 +128,7 @@
 .mobile-search-bar {
   display: flex;
   align-items: center;
-  background-color: #3a3a42;
+  background-color: var( --bg-input);
   padding: 12px 18px;
   border-radius: 25px 25px 0 0;
 }
@@ -100,7 +147,7 @@
 .mobile-search-close {
   background: none;
   border: none;
-  color: white;
+  color: var( --searchbar-icon);
   font-size: 20px;
   cursor: pointer;
   padding: 6px;
@@ -123,18 +170,19 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: #3a3a42;
+  background-color: var( --bg-input);
   border-radius: 0 0 18px 18px;
   padding: 8px 0;
   box-shadow: 0 15px 35px rgba(0,0,0,0.4);
   z-index: 1000;
   border-top: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden;
 }
 
 /* ========= MOBILE SEARCH DROPDOWN ======== */
 
 .mobile-search-dropdown {
-  background: #3a3a42;
+  background: var( --searchbar-dropdown);
   border-radius: 0 0 25px 25px;
   overflow: hidden;
 }
@@ -209,6 +257,17 @@
   display: none;
 }
 
+.drawer-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.drawer-item i {
+  font-size: 18px;
+}
 
 /* ---------------- RESPONSIVE ---------------- */
 
