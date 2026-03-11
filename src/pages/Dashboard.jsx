@@ -11,6 +11,7 @@ function Dashboard() {
   const [boards, setBoards] = useState([]);
   const [newBoard, setNewBoard] = useState("");
   const { searchTerm } = useContext(SearchContext);
+  const [boardsVisibility, setBoardsVisibility] = useState({});
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -64,6 +65,13 @@ function Dashboard() {
     board.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const toggleVisibility = (id) => {
+    setBoardsVisibility((prev) => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
   return (
     <div className="app-section-container">
         
@@ -96,6 +104,10 @@ function Dashboard() {
                   </Link>
 
                   <div className="item-actions">
+                    <i
+                      className={`bi ${boardsVisibility[board._id] ? "bi-unlock" : "bi-lock"} visibility-icon`}
+                      onClick={() => toggleVisibility(board._id)}
+                    ></i>
                     <i className="bi bi-pencil icon"></i>
                     <i className="bi bi-trash icon delete" onClick={() => handleDeleteBoard(board._id)}></i>
                   </div>

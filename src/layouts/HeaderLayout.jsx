@@ -83,6 +83,13 @@ function HeaderLayout({ theme, setTheme }) {
           </button>
 
           <button
+            className="social-button"
+            onClick={() => navigate("/social")}
+          >
+            <i className="bi bi-people"></i>
+          </button>
+
+          <button
             className="theme-toggle"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
@@ -271,6 +278,17 @@ function HeaderLayout({ theme, setTheme }) {
           >
             <i className="bi bi-house"></i>
             <span>Inicio</span>
+          </div>
+
+          <div
+            className="drawer-item"
+            onClick={() => {
+              navigate("/social");
+              setMenuOpen(false);
+            }}
+          >
+            <i className="bi bi-people"></i>
+            <span>Social</span>
           </div>
 
           <div

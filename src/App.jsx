@@ -7,6 +7,7 @@ import SectionDetails from "./pages/SectionDetails";
 import ClassDetails from "./pages/ClassDetails";
 import HeaderLayout from "./layouts/HeaderLayout";
 import { useState, useEffect } from "react";
+import Social from "./pages/Social";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/boards/:id" element={<BoardDetails />} />
         <Route path="/sections/:id" element={<SectionDetails />} />
         <Route path="/classes/:id" element={<ClassDetails />} />
+        <Route path="/social" element={<Social />} />
       </Route>
 
     </Routes>

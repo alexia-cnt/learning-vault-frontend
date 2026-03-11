@@ -3,7 +3,7 @@
 .header-left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
 }
 
 .app-header {
@@ -58,11 +58,25 @@
 .theme-toggle {
   background: none;
   border: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* ---------------- SOCIAL BUTTON ---------------- */
+
+.social-button {
+  background: none;
+  border: none;
   font-size: 18px;
   color: white;
   cursor: pointer;
 }
 
+.social-button:hover {
+  opacity: 0.8;
+}
 
 /* ---------------- SEARCH BAR ---------------- */
 
@@ -137,7 +151,7 @@
   flex: 1;
   background: none;
   border: none;
-  color: white;
+  color: var( --text-primary);
   font-size: 14px;
   outline: none;
 }
@@ -277,6 +291,12 @@
   }
 }
 
+@media (min-width: 769px) {
+  .menu-button {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
 
   .header-right {
@@ -349,6 +369,18 @@
 
   .header-search {
     width: 250px;
+  }
+
+  .home-button {
+    display: none;
+  }
+
+  .theme-toggle {
+    display: none;
+  }
+
+  .social-button {
+    display: none;
   }
 
 }
