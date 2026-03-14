@@ -1,80 +1,94 @@
-Learning Vault – Frontend
+# Learning Vault – Frontend
 
-Aplicación web desarrollada con React + Vite que consume la API del backend para gestionar contenido educativo organizado en tableros.
+Aplicación web desarrollada con React + Vite que permite gestionar contenido de estudio organizado en estructuras jerárquicas.
 
+El sistema permite a cada usuario crear su propio espacio de aprendizaje organizando contenido en:
 
-Tecnologías utilizadas:
+Boards → Sections → Classes → Blocks
 
-React
-Vite
-React Router
-Axios
-Bootstrap Icons
-CSS personalizado
-Funcionalidades implementadas
-Registro de usuario
-Verificación por email
-Login con JWT
+La aplicación consume la API desarrollada en el backend.
 
-CRUD de:
-Tableros
-Secciones
-Clases
-Bloques
-Protección de rutas
-Barra de búsqueda global
-Menú responsive móvil
+---
 
-Diseño completamente responsive (2000px – 320px)
+## Tecnologías utilizadas
 
-Funcionalidades visuales preparadas (no activas aún):
+- React
+- Vite
+- React Router
+- Context API
+- CSS
+- Fetch API
 
-Cambiar temas de colores.
-Filtros por categorías en todas las rutas.
-Listado de tableros a grilla de tableros.
-Descripcion corta de cada tablero, sección o clase.
+---
 
-Para futuras versiones se dejaron preparadas visualmente:
-Botón de editar
-Filtros por tipo de contenido en clases (Texto / Imágenes / Videos)
-Estas funcionalidades fueron diseñadas para expansión futura sin modificar la estructura principal.
+## Funcionalidades
 
+- Registro de usuarios
+- Login con autenticación JWT
+- Verificación de cuenta por email
+- Creación de boards
+- Organización en sections
+- Creación de clases dentro de cada sección
+- Creación de bloques de contenido
+- Eliminación de contenido
+- Interfaz responsive
 
-Instalación y ejecución
+---
 
-1- Clonar repositorio
-Bash
-Copiar código
-git clone <URL_DEL_REPO>
-cd frontend
+## Instalación
 
-2- Instalar dependencias
-Bash
-Copiar código
+1. Clonar el repositorio
+git clone https://github.com/alexia-cnt/learning-vault-frontend.git
+cd learning-vault-frontend
+
+2. Instalar dependencias
 npm install
 
-3- Crear archivo .env
-Copiar código
+---
 
-VITE_API_URL=http://localhost:4000/api
+## Variables de entorno
 
-4- Ejecutar
-Bash
-Copiar código
+Crear un archivo `.env` en la raíz del proyecto.
+
+Ejemplo:
+VITE_API_URL=http://localhost:4000
+
+
+---
+
+## Ejecutar la aplicación
+
 npm run dev
-App disponible en:
 
-Copiar código
-http://localhost:5173
+La aplicación estará disponible en: http://localhost:5173
 
+---
 
-Autenticación
+## Usuario de prueba
 
-El token JWT se almacena en localStorage y se envía automáticamente en las requests protegidas.
+Se puede acceder con el siguiente usuario:
 
+Email: test6@test.com
+Password: Password123
 
-Credenciales válidas (con mail ya verificado):
+---
 
-name: test
-email: test@test.com
-password: 123456
+## Mejoras futuras
+
+Algunas funcionalidades previstas para futuras versiones de la interfaz:
+
+- El botón de editar (el icono del lapiz) actualmente es solo visual. En futuras versiones permitirá modificar el nombre de los elementos.
+- El candado de privacidad actualmente es visual. Más adelante permitirá marcar los tableros como públicos o privados.
+- Cuando un tablero sea público, aparecerá automáticamente en la pestaña "Social" para que otros usuarios puedan explorarlo.
+- Ampliar completamente la pestaña "Social" para descubrir nuevos tableros creados por otros usuarios.
+- Mejorar la interfaz del listado de tableros para una navegación más clara y linda.
+- Permitir asignar color y una breve descripción a cada tablero para facilitar la organización visual.
+- Implementar la posibilidad de duplicar tableros completos para reutilizar estructuras de estudio ya existentes.
+- Permitir exportar tableros a formatos como PDF o Markdown, para poder estudiar el contenido fuera de la aplicación o compartirlo fácilmente.
+
+---
+
+## Repositorio
+
+Frontend:  
+https://github.com/alexia-cnt/learning-vault-frontend
